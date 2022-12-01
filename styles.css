@@ -134,19 +134,19 @@ h1 {
     position: fixed;
     right: 0;
     top: 0;
-    width: 300px;    
-  }
-    
-  .menu li {
-    width: 100%; 
+    width: 300px;
   } 
-    
+  
+  .menu li {
+    width: 100%;
+  } 
+
   .menu li a {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     font-size: 24px;
-    padding: 30px; 
-  }
-    
+    padding: 30px;
+  } 
+
   .portfolio {
     background-image: url('./image/header-shapes\ mobile.png');
   }
