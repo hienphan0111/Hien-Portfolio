@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
 * {
   box-sizing: border-box;
   list-style: none;
@@ -53,36 +55,20 @@ nav {
 }
 
 .hamberger {
-  background-color: #acb7c3;
-  border-radius: 10px;
   cursor: pointer;
   display: none;
-  height: 4px;
-  position: relative;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-around;
   transition: 0.3s;
-  width: 30px;
-  z-index: 2;
+  width: 40px;
 }
 
-.hamberger::before,
-.hamberger::after {
-  background: #acb7c3;
-  border-radius: 10px;
-  content: '';
-  height: 4px;
-  position: absolute;
-  right: 0;
-  transition: 0.3s;
-}
-
-.hamberger::before {
-  top: -10px;
-  width: 20px;
-}
-
-.hamberger::after {
-  top: 10px;
-  width: 25px;
+.line {
+  background-color: #6070ff;
+  border: 2px solid #6070ff;
+  border-radius: 2px;
+  margin: 3px;  
 }
 
 .logo {
@@ -100,9 +86,9 @@ nav {
 h1 {
   align-items: center;
   color: #172b4d;
-  font-size: 40px;
+  font-size: 48px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 52px;
   margin-bottom: 5px;
   text-align: left;
@@ -121,9 +107,9 @@ h1 {
 }
 
 .contact-icon {
-  filter: opacity(0.7);
+  color: #505f79;
   margin: 15px;
-  width: 30px;
+  size: 40px;
 }
 
 .contact-icon:first-child {
@@ -141,7 +127,7 @@ h1 {
 
 @media screen and (max-width: 900px) {
   .hamberger {
-    display: block;
+    display: flex;
     position: absolute;
     right: 25px;
     top: 25px;
@@ -169,6 +155,10 @@ h1 {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     font-size: 24px;
     padding: 30px;
+  }
+
+  .logo {
+    margin-top: 10px;
   }
 
   .portfolio {
