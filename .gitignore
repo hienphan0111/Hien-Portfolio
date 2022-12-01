@@ -105,3 +105,4 @@ dist
 
 package.json
 .stylelintrc.json
+package-lock.json
