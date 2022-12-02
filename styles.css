@@ -133,7 +133,6 @@ h1 {
 
 .work {
   display: grid;
-  /* margin-right: 25px; */
   padding: 25px;
 }
 
@@ -248,7 +247,7 @@ h1 {
 
 .btn:focus {
   outline-color: transparent;
-  outline-style:solid;
+  outline-style: solid;
   box-shadow: 0 0 0 4px #5a01a7;
   transition: 0.7s;
 }
