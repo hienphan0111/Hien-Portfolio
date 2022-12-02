@@ -69,7 +69,7 @@ nav {
   background-color: #6070ff;
   border: 2px solid #6070ff;
   border-radius: 2px;
-  margin: 3px;  
+  margin: 3px;
 }
 
 .logo {
@@ -146,7 +146,6 @@ h1 {
   margin: 20px;
   padding: 25px;
   width: 100%;
-  
 }
 
 .snap-shoot {
@@ -335,6 +334,7 @@ h1 {
   font-size: 15px;
   margin: 25px 0;
 }
+
 @media screen and (max-width: 900px) {
   .hamberger {
     display: flex;
@@ -382,5 +382,4 @@ h1 {
   .snap-shoot img {
     width: 100%;
   }
-
 }
