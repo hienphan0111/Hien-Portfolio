@@ -327,6 +327,68 @@ h1 {
   margin: 25px 0;
 }
 
+/* Contact section */
+
+.contact {
+  background-color: #fff;
+ }
+
+ .contact-box {
+  background-color: rgba(96, 112, 255, 0.9);
+  border-radius: 70px 0 0 0;
+  display: grid;
+  justify-items: center;
+  padding: 50px 40px;
+ }
+
+ .form-header {
+  color: #fff;
+  padding: 50px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 570px;
+ }
+
+ .contact-header {
+  
+  font-size: 40px;
+  font-weight: 700;
+ }
+
+ .contact-text {
+  font-size: 20px;
+ }
+
+ .contact-form {
+  margin-top: 40px;
+  width: 100%;
+ }
+
+ .contact-form > ul {
+  display: flex;
+  flex-direction: column;
+ }
+ 
+ .contact-form > ul > li {
+  width: 100%;
+ }
+
+ .input {
+  color: #172b4d;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size:17px;
+  height: 48px;
+  margin: 10px 0;
+  padding: 15px;
+  width: 100%;
+ }
+
+ .tx-area {
+  height: 170px;
+ }
+ 
 @media screen and (max-width: 600px) {
   .hamberger {
     display: flex;
@@ -382,7 +444,12 @@ h1 {
   .lang li {
     overflow: hidden;
   }
+
+  .contact {
+    background-image: url('./image/contact-form-shapes-mobile.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    z-index: 2;
+  }
 }
- .contact {
-  background-color: #6070FF;
- }
+ 
