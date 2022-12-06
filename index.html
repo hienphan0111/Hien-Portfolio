@@ -161,8 +161,16 @@
             </ul>
         </section>
         <section class="contact">
-            <h2 class="contact-header">Contact me</h2>
-            <p class="contact-text">If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it </p>
+            <div class="form-header">
+                <h2 class="contact-header">Contact me</h2>
+                <p class="contact-text">If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it </p>
+            </div>
+            <form method="post" action="https://formspree.io/f/xknedrqa" class="contact-form">
+                <input type="text" name="name" id="name" placeholder="Yeremias" maxlength="30" required >
+                <input type="email" name="email" id="email" placeholder="natajayanj14@gmail.com" required >
+                <textarea name="message" id="message" cols="30" rows="10" maxlength="500" placeholder="Write your message here" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
         </section>
     </main>
 </body>
