@@ -383,7 +383,7 @@ h1 {
 .tx-area {
   height: 170px;
 }
- 
+
 @media screen and (max-width: 600px) {
   .hamberger {
     display: flex;
@@ -447,4 +447,3 @@ h1 {
     z-index: 2;
   }
 }
- 
