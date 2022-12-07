@@ -218,6 +218,10 @@ h1 {
   padding: 5px 15px;
 }
 
+.contact-form > ul > li {
+  width: 100%;
+}
+
 .langue li:first-child {
   margin-left: 0;
 }
@@ -369,10 +373,6 @@ h1 {
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-
-.contact-form > ul > li {
-  width: 100%;
 }
 
 .input {
