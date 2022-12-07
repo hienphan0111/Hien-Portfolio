@@ -323,11 +323,13 @@ h1 {
 
 .contact-box {
   background-color: rgba(96, 112, 255, 1);
+  background-image: url('./image/contact-form-shapes-mobile.png');
+  background-position: right top;
+  background-repeat: no-repeat;
   border-radius: 70px 0 0;
   display: grid;
   justify-items: center;
   padding: 50px 40px;
-  z-index: -1;
 }
 
 .form-header {
@@ -381,12 +383,7 @@ h1 {
   max-width: 400px;
 }
 
-.contact-box {
-  background-image: url('./image/contact-form-shapes-mobile.png');
-  background-position: right top;
-  background-repeat: no-repeat;
-  z-index: 2;
-}
+
 
 @media only screen and (min-width: 600px) {
   .header {
