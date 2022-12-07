@@ -383,8 +383,6 @@ h1 {
   max-width: 400px;
 }
 
-
-
 @media only screen and (min-width: 600px) {
   .header {
     align-items: center;
