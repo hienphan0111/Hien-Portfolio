@@ -106,3 +106,6 @@ dist
 package.json
 .stylelintrc.json
 package-lock.json
+
+#archive old css file
+style_old.css
