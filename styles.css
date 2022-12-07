@@ -109,11 +109,16 @@ h1 {
 }
 
 .info {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 20px;
   width: 80vw;
 }
 
 /* Work section */
-  
+
 .work {
   display: grid;
   justify-content: center;
@@ -138,14 +143,6 @@ h1 {
 
 .snap-shoot img {
   width: 100%;
-}
-
-.info {
-  align-items: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-left: 20px;
 }
 
 .pj-title {
@@ -244,7 +241,7 @@ h1 {
 }
 
 /* About section */
-  
+
 .about {
   background-color: #fff;
   border-radius: 0 50px 0 0;
@@ -413,11 +410,11 @@ h1 {
     justify-content: center;
     transition: 0.5s;
   }
-  
+
   .menu li {
     list-style-type: none;
   }
-  
+
   .menu li a {
     color: #344563;
     display: block;
@@ -426,14 +423,14 @@ h1 {
     padding: 40px 25px;
     transition: 0.3s;
   }
-  
+
   .menu li a:hover {
     box-shadow:
       0 -5px 0 #fff inset,
       500px 0 0 rgba(201, 42, 250, 0.2) inset;
     padding: 35px 25px 45px;
   }
-  
+
   .hamberger {
     cursor: pointer;
     display: none;
@@ -443,14 +440,14 @@ h1 {
     transition: 0.3s;
     width: 40px;
   }
-  
+
   .line {
     background-color: #6070ff;
     border: 2px solid #6070ff;
     border-radius: 2px;
     margin: 3px;
   }
-  
+
   .logo {
     height: 40px;
     justify-content: left;
@@ -471,12 +468,12 @@ h1 {
   }
 
   /* Work section */
-  
+
   .work {
     margin-top: 140px;
     padding: 0;
   }
-  
+
   .project {
     margin: 30px auto;
     width: 100%;
@@ -485,62 +482,62 @@ h1 {
   .project:nth-child(even) {
     flex-direction: row-reverse;
   }
-  
+
   .snap-shoot {
     max-width: 550px;
     width: 80vw;
   }
-  
+
   .snap-shoot img {
     width: 100%;
   }
-  
+
   .info {
     max-width: 550px;
     padding: 20px 10px 50px;
   }
-  
+
   .pj-title {
     font-size: 40px;
   }
-  
+
   .meta {
     font-size: 18px;
   }
-    
+
   .project-des {
     color: #344563;
     font-size: 16px;
     line-height: 24px;
   }
-  
+
   .langue {
     align-items: center;
     display: flex;
   }
 
   /* About section */
-  
+
   .about {
     padding: 8rem;
     width: 100%;
   }
-  
+
   .about-info {
     max-width: 450px;
     padding: 20px;
   }
-  
+
   .icon {
     right: 9rem;
   }
-  
+
   /* Contact section */
-  
+
   .contact {
     background-color: #fff;
   }
-  
+
   .contact-box {
     background-image: url('./image/dt_contact-form-background-shapes.svg');
     background-position: center;
