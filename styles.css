@@ -527,6 +527,18 @@ h1 {
     right: 9rem;
   }
 
+  .lang {
+    display: flex;
+  }
+
+  .lang-box {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 120px;
+    margin: 6px;
+    width: 122px;
+  }
+
   /* Contact section */
 
   .contact {
