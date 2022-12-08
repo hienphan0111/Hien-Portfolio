@@ -50,10 +50,17 @@ nav {
 }
 
 .logo {
+  animation: rotate 2s;
   height: 40px;
   justify-content: left;
   margin-top: 10px;
   padding: 0 30px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(180deg);
+  }
 }
 
 .portfolio {
@@ -67,6 +74,7 @@ nav {
 
 h1 {
   align-items: center;
+  animation: slide-in 2s ease-in;
   color: #172b4d;
   font-size: 40px;
   font-style: normal;
@@ -76,7 +84,15 @@ h1 {
   text-align: left;
 }
 
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+}
+
 .description {
+  animation: slide-in 2s ease-in;
+  animation-delay: 2s;
   color: #344563;
   font-size: 16px;
   font-weight: 400;
@@ -126,6 +142,7 @@ h1 {
 }
 
 .project {
+  animation: 3s 1 alternate slidein;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 3px 4px 0 #344563;
@@ -137,11 +154,16 @@ h1 {
   width: 90vw;
 }
 
-.snap-shoot {
+.snap-shoot img {
+  transition-duration: 0.5s;
   width: 100%;
 }
 
-.snap-shoot img {
+.project:hover .snap-shoot img {
+  transform: scale(1.1, 1.1);
+}
+
+.snap-shoot {
   width: 100%;
 }
 
@@ -381,6 +403,18 @@ h1 {
 .contact-form > ul > li:last-child {
   display: flex;
   max-width: 400px;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
