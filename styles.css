@@ -74,6 +74,7 @@ nav {
 
 h1 {
   align-items: center;
+  animation: slide-in 2s ease-in;
   color: #172b4d;
   font-size: 40px;
   font-style: normal;
@@ -83,7 +84,15 @@ h1 {
   text-align: left;
 }
 
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+}
+
 .description {
+  animation: slide-in 2s ease-in;
+  animation-delay: 2s;
   color: #344563;
   font-size: 16px;
   font-weight: 400;
