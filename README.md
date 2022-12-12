@@ -114,7 +114,7 @@ Example command:
 
 ### Deployment
 
-You can deploy this project using:
+The project was deployed which you can access this link: https://hienphan0111.github.io/Hien-Portfolio/
 
 <!--
 Example:
