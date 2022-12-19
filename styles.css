@@ -42,6 +42,74 @@ nav {
   width: 40px;
 }
 
+.hidden {
+  display: none;
+}
+
+#btn-close {
+  border: none;
+  background-color: #6070ff00;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  position: fixed; 
+  right: 70px;
+  z-index: 3;
+}
+
+.menu-toggle {
+  animation-name: slidein;
+  animation-duration: 1s;
+  color: #fff;
+  display: block;
+  font-size: 32px;
+  font-weight: 600;
+  position: fixed;
+  left: 28px;
+  top: 50px;
+  z-index: 5;
+}
+
+.menu-toggle > li > a {
+  color: #fff;
+  margin: 20px 0;
+}
+
+.overlay {
+  animation-name: slidein;
+  animation-duration: 1s;
+  background-color:#0517be8f;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 100%;
+    width: 300%;
+  }
+}
+
 .line {
   background-color: #6070ff;
   border: 2px solid #6070ff;
