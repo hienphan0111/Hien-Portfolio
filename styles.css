@@ -52,7 +52,7 @@ nav {
   color: #fff;
   cursor: pointer;
   font-size: 24px;
-  position: fixed; 
+  position: fixed;
   right: 70px;
   z-index: 3;
 }
@@ -78,7 +78,7 @@ nav {
 .overlay {
   animation-name: slidein;
   animation-duration: 1s;
-  background-color:#0517be8f;
+  background-color: #0517be8f;
   backdrop-filter: blur(10px);
   position: fixed;
   height: 100vh;
@@ -176,7 +176,7 @@ h1 {
 .contact-icon {
   color: #505f79;
   margin: 25px;
-  size: 40px;
+  font-size: 40px;
 }
 
 .contact-icon:first-child {
@@ -425,7 +425,7 @@ h1 {
 .form-header {
   color: #fff;
   max-width: 570px;
-  padding: 50px auto;
+  /* padding: 50px auto; */
   text-align: center;
   width: 100%;
 }
