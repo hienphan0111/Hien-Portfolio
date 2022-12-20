@@ -13,15 +13,17 @@
     <script src="https://kit.fontawesome.com/a329405765.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="overlay hidden"></div>
     <header class="header">
         <a href="http://" target="_blank" rel="noopener noreferrer"><img src="./image/logoipsum-265.svg" alt="Logo" class="logo"></a>
         <nav >
+            <button id="btn-close" class="hidden"><i class="fa-solid fa-xmark"></i></button>
             <div class="hamberger">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </div>
-            <ul class="menu">
+            <ul class="menu" id="menu">
                 <li><a href="#portfolio">Porfolio</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -42,7 +44,7 @@
                 </ul>                
             </div>
         </section>
-        <section class="work">
+        <section class="work" id="work">
             <div class="project pr-1">
                 <div class="snap-shoot">
                     <img src="./image/Snapshoot Portfolio-1.svg" alt="project 1">
@@ -132,7 +134,7 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="about-info">
                 <h2>About <br> Myself</h2>  
                 <p class="about-des">Hello I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>  
@@ -160,7 +162,7 @@
                 <li class="skill bg">Skill <img src="./image/chevron.svg" alt="chevron" class="icon"></li>
             </ul>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="contact-box">
                 <div class="form-header">
                     <h2 class="contact-header">Contact me</h2>
@@ -177,5 +179,6 @@
             </div>
         </section>
     </main>
+    <script src="index.js"> </script>
 </body>
 </html>
