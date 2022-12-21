@@ -143,3 +143,28 @@ pjBtn.forEach((item, index) => {
     });
   });
 });
+
+/* Validate contact form */
+
+const form = document.getElementById('contact-form');
+const name = form.elements['name'];
+const email = form.elements['email'];
+const submit = form.elements['submit'];
+
+const fullName = name.value;
+
+const messageContext = message.value;
+
+const ERROR = 'Email does not valid. Plead type a valid email';
+
+const checkValidEmail = (email) => {
+  const str = email.toLowerCase();
+  const compare = email.localeCompare(str);
+  return !(email.localeCompare(str)) ? true : false;
+}
+
+const showMessage = (input, message) => {
+  const small = input.nextElementSibling;
+  small.innerText = message;
+}
+
