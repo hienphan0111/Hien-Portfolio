@@ -574,7 +574,12 @@ h1 {
 
 .contact-form > ul > li:last-child {
   display: flex;
+  align-items: center;
   max-width: 400px;
+}
+
+.contact-form > ul > li:last-child > small {
+  color: red;
 }
 
 @keyframes slidein {
@@ -758,7 +763,8 @@ h1 {
     background-size: 80%;
   }
 
-  .contact-form > ul > li:last-child {
+  .contact-form > ul > li:last-child,
+  .contact-form > ul > li:last-child > small {
     display: block;
   }
 

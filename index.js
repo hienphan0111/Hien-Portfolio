@@ -143,3 +143,32 @@ pjBtn.forEach((item, index) => {
     });
   });
 });
+
+/* Validate contact form */
+
+const form = document.getElementById('contact-form');
+const { email, btnSubmit } = form.elements;
+
+const ERROR = 'Email does not valid. Plead type a valid email';
+
+const checkValidEmail = (email) => {
+  const str = email.toLowerCase();
+  return !(email.localeCompare(str));
+};
+
+const showMessage = (input, message) => {
+  const small = input.nextElementSibling;
+  small.innerText = message;
+};
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const emailAdd = email.value;
+  const small = btnSubmit.nextElementSibling;
+  small.innerText = '';
+  if (checkValidEmail(emailAdd)) {
+    form.submit();
+  } else {
+    showMessage(btnSubmit, ERROR);
+  }
+});
