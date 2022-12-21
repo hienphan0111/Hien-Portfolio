@@ -211,6 +211,7 @@ h1 {
   margin: 0 auto;
   justify-content: center;
 }
+
 .pop-container {
   background-color: #fff;
   border: 1px solid #091e42;
@@ -249,11 +250,10 @@ h1 {
 
 .p-bot {
   display: block;
- 
 }
 
 .p-des {
-  text-align: justify; 
+  text-align: justify;
   max-width: 768px;
 }
 
@@ -278,10 +278,20 @@ h1 {
   column-gap: 15px;
   width: 100%;
 }
+
 #p-btn-see,
 #p-btn-source {
   align-items: center;
   font-size: 15px;
+}
+
+.snap-shoot img {
+  transition-duration: 0.5s;
+  width: 100%;
+}
+
+.project:hover .snap-shoot img {
+  transform: scale(1.1, 1.1);
 }
 
 #p-btn-see > img,
@@ -293,9 +303,9 @@ h1 {
 .p-overlay {
   background-color: #c1c7d0aa;
   backdrop-filter: blur(5px);
-  position:fixed;
+  position: fixed;
   height: 100vh;
-  width:100vw;
+  width: 100vw;
   z-index: 5;
 }
 
@@ -303,6 +313,7 @@ h1 {
   overflow: hidden;
   position: fixed;
 }
+
 /* Work section */
 
 .work {
@@ -322,15 +333,6 @@ h1 {
   margin: 30px 24px;
   padding: 16px;
   width: 90vw;
-}
-
-.snap-shoot img {
-  transition-duration: 0.5s;
-  width: 100%;
-}
-
-.project:hover .snap-shoot img {
-  transform: scale(1.1, 1.1);
 }
 
 .snap-shoot {
@@ -761,7 +763,6 @@ h1 {
   }
 
   .p-bot {
-    align-items: top;
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 20px;

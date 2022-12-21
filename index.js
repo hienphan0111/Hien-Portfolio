@@ -37,7 +37,7 @@ const projects = [
     featureImage: './image/Snapshoot-Portfolio-1.svg',
     technologies: ['HTML', 'CSS', 'Javascript', 'github', 'ruby', 'Bootstraps'],
     liveVersion: '',
-    scource: ''
+    scource: '',
   },
   {
     name: 'Multi-Post Stories',
@@ -46,7 +46,7 @@ const projects = [
     featureImage: './image/Snapshoot-Portfolio-2.svg',
     technologies: ['HTML', 'CSS', 'Javascript', 'github', 'ruby', 'Bootstraps'],
     liveVersion: '',
-    scource: ''
+    scource: '',
   },
   {
     name: 'Facebook 360',
@@ -55,7 +55,7 @@ const projects = [
     featureImage: './image/Snapshoot-Portfolio-3.svg',
     technologies: ['HTML', 'CSS', 'Javascript', 'github', 'ruby', 'Bootstraps'],
     liveVersion: '',
-    scource: ''
+    scource: '',
   },
   {
     name: 'Uber Navigation',
@@ -64,31 +64,39 @@ const projects = [
     featureImage: './image/Snapshoot-Portfolio-3.svg',
     technologies: ['HTML', 'CSS', 'Javascript', 'github', 'ruby', 'Bootstraps'],
     liveVersion: '',
-    scource: ''
-  }
+    scource: '',
+  },
 ];
 
-function createList(arr){
-  let ctList = document.createElement('ul');
-  arr.forEach( item => {
-    let li = document.createElement('li');
+function createList(arr) {
+  const ctList = document.createElement('ul');
+  arr.forEach((item) => {
+    const li = document.createElement('li');
     li.innerHTML = item;
     ctList.appendChild(li);
   });
   return ctList;
 }
 
-const _renderPopup = (index) => {
-  const { name, categories, description, featureImage, technologies, liveVersion, scource} = projects[index];
+const renderPopup = (index) => {
+  const {
+    name, categories, description, featureImage 
+  }
+  = projects[index];
+  const {
+    technologies, liveVersion, scource
+  }
+  = projects[index];
+
   const catlog = createList(categories);
   const lang = createList(technologies);
-  
+
   catlog.classList.add('p-meta');
   const ls = catlog.querySelectorAll('li');
   ls.forEach((item, index) => {
     const sp = document.createElement('span');
     sp.classList.add('dot');
-    if(index > 0 ){
+    if (index > 0) {
       item.prepend(sp);
       item.classList.add('gray');
     } else {
@@ -96,10 +104,10 @@ const _renderPopup = (index) => {
     }
   });
 
-  let html = `
+  const html = `
   <div class='pop-container'>
     <button id="close-popup"><i class="fa-solid fa-xmark"></i></button>
-    <h2 class='pj-title'>${ name }</h2>
+    <h2 class='pj-title'>${name}</h2>
     <ul class='meta'>${catlog.innerHTML}</ul>
     <img src=${featureImage} alt='featureImage' class="p-img" />
     <div class='p-bot'>
@@ -116,17 +124,16 @@ const _renderPopup = (index) => {
       </div>
     </div>  
   </div>
-`
+`;
   popup.innerHTML = html;
-}
+};
 
-console.log(pjBtn);
 pjBtn.forEach((item, index) => {
-  item.addEventListener('click', (event)=> {
+  item.addEventListener('click', () => {
     const pOverlay = document.querySelector('.p-overlay');
     const body = document.querySelector('body');
 
-    _renderPopup(index);
+    renderPopup(index);
     popup.classList.remove('hidden');
     pOverlay.classList.remove('hidden');
     body.classList.add('p-body');
@@ -136,15 +143,5 @@ pjBtn.forEach((item, index) => {
       pOverlay.classList.add('hidden');
       body.classList.remove('p-body');
     });
-  });  
+  });
 });
-
-
-
-
-
-
-
-
-
-
