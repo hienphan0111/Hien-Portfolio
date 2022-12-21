@@ -109,3 +109,5 @@ package-lock.json
 
 #archive old css file
 style_old.css
+
+test.js
