@@ -147,7 +147,7 @@ pjBtn.forEach((item, index) => {
 /* Validate contact form */
 
 const form = document.getElementById('contact-form');
-const { email, submit } = form.elements;
+const { email, btnSubmit } = form.elements;
 
 const ERROR = 'Email does not valid. Plead type a valid email';
 
@@ -164,9 +164,11 @@ const showMessage = (input, message) => {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const emailAdd = email.value;
+  const small = btnSubmit.nextElementSibling;
+  small.innerText = '';
   if (checkValidEmail(emailAdd)) {
     form.submit();
   } else {
-    showMessage(submit, ERROR);
+    showMessage(btnSubmit, ERROR);
   }
 });
