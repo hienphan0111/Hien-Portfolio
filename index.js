@@ -147,40 +147,29 @@ pjBtn.forEach((item, index) => {
 /* Validate contact form */
 
 const form = document.getElementById('contact-form');
-const name = form.elements['name'];
-const email = form.elements['email'];
-const submit = form.elements['submit'];
-
-const fullName = name.value;
-
-const messageContext = message.value;
+const { name, email, submit } = form.elements;
 
 const ERROR = 'Email does not valid. Plead type a valid email';
 
 const checkValidEmail = (email) => {
   const str = email.toLowerCase();
-  const compare = email.localeCompare(str);
-  return !(email.localeCompare(str)) ? true : false;
-}
+  return !(email.localeCompare(str));
+};
 
 const showMessage = (input, message) => {
   const small = input.nextElementSibling;
   small.innerText = message;
-}
+};
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const emailAdd = email.value;
-  if(checkValidEmail(emailAdd))
-  {
-    form.submit();
-  }
-  else 
-  {
-    showMessage(submit, ERROR);
-  }
+  if (checkValidEmail(emailAdd))
+    {
+      form.submit();
+    }
+  else
+    {
+      showMessage(submit, ERROR);
+    }
 });
-
-email.addEventListener('change', ()=> {
-  const emailAdd = email.value;
-})
