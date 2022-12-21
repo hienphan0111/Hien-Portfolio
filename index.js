@@ -3,7 +3,6 @@ const menu = document.getElementById('menu');
 const hbgMenu = document.querySelector('.hamberger');
 const overlay = document.querySelector('.overlay');
 const itemsMenuToggle = document.querySelectorAll('.menu > li');
-const popup = document.querySelector('.popup');
 
 const closeToggleMenu = () => {
   overlay.classList.add('hidden');
@@ -25,54 +24,127 @@ itemsMenuToggle.forEach((item) => {
   item.addEventListener('click', closeToggleMenu);
 });
 
+/* Popup for detail project */
+
+const pjBtn = document.querySelectorAll('.pj-btn');
+const popup = document.querySelector('.popup');
+
 const projects = [
   {
     name: 'Tonic',
-    catagories: ['Canopy', 'Back End Dev', '2015'],
+    categories: ['Canopy', 'Back End Dev', '2015'],
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    featureImage: './image/Snapshoot Portfolio-1.svg',
+    featureImage: './image/Snapshoot-Portfolio-1.svg',
     technologies: ['HTML', 'CSS', 'Javascript', 'github', 'ruby', 'Bootstraps'],
     liveVersion: '',
     scource: ''
   },
   {
     name: 'Multi-Post Stories',
-    catagories: ['Fabebook', 'Full Stack Dev', '2015'],
+    categories: ['Fabebook', 'Full Stack Dev', '2015'],
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    featureImage: './image/Snapshoot Portfolio-2.svg',
+    featureImage: './image/Snapshoot-Portfolio-2.svg',
     technologies: ['HTML', 'CSS', 'Javascript', 'github', 'ruby', 'Bootstraps'],
     liveVersion: '',
     scource: ''
   },
   {
     name: 'Facebook 360',
-    catagories: ['Facebook', 'Full Stack Dev', '2015'],
+    categories: ['Facebook', 'Full Stack Dev', '2015'],
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    featureImage: './image/Snapshoot Portfolio-3.svg',
+    featureImage: './image/Snapshoot-Portfolio-3.svg',
     technologies: ['HTML', 'CSS', 'Javascript', 'github', 'ruby', 'Bootstraps'],
     liveVersion: '',
     scource: ''
   },
   {
     name: 'Uber Navigation',
-    catagories: ['Uber', 'Lead Developer', '2015'],
+    categories: ['Uber', 'Lead Developer', '2015'],
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    featureImage: './image/Snapshoot Portfolio-3.svg',
+    featureImage: './image/Snapshoot-Portfolio-3.svg',
     technologies: ['HTML', 'CSS', 'Javascript', 'github', 'ruby', 'Bootstraps'],
     liveVersion: '',
     scource: ''
   }
 ];
 
+function createList(arr){
+  let ctList = document.createElement('ul');
+  arr.forEach( item => {
+    let li = document.createElement('li');
+    li.innerHTML = item;
+    ctList.appendChild(li);
+  });
+  return ctList;
+}
 
-let html = `
+const _renderPopup = (index) => {
+  const { name, categories, description, featureImage, technologies, liveVersion, scource} = projects[index];
+  const catlog = createList(categories);
+  const lang = createList(technologies);
+  
+  catlog.classList.add('p-meta');
+  const ls = catlog.querySelectorAll('li');
+  ls.forEach((item, index) => {
+    const sp = document.createElement('span');
+    sp.classList.add('dot');
+    if(index > 0 ){
+      item.prepend(sp);
+      item.classList.add('gray');
+    } else {
+      item.classList.add('type');
+    }
+  });
+
+  let html = `
   <div class='pop-container'>
-    <h2 class='pj-title'>${projects[index].name}</h2>
-    <ul class="meta">
-      <li class="type">Canopy</li>
-      <li class="catagories gray"><span class="dot"></span>Backend Dev</li>
-      <li class="year gray"><span class="dot"></span>2015</li>
-    </ul>
+    <button id="close-popup"><i class="fa-solid fa-xmark"></i></button>
+    <h2 class='pj-title'>${ name }</h2>
+    <ul class='meta'>${catlog.innerHTML}</ul>
+    <img src=${featureImage} alt='featureImage' class="p-img" />
+    <div class='p-bot'>
+      <p class="p-des"> ${description} </p>
+      <div>
+        <ul class='langue p-lang'>
+          ${lang.innerHTML}
+        </ul>
+        <hr class="p-hr">
+        <div class="p-btn">
+          <button class="btn" id="p-btn-see" href=${liveVersion}>See live <img src="./image/p-see-icon.svg"</button>
+          <button class="btn" id="p-btn-source" href=${scource}>Source <i class="fa-brands fa-github"></i></button>
+        </div>
+      </div>
+    </div>  
   </div>
-
 `
+  popup.innerHTML = html;
+}
+
+console.log(pjBtn);
+pjBtn.forEach((item, index) => {
+  item.addEventListener('click', (event)=> {
+    const pOverlay = document.querySelector('.p-overlay');
+    const body = document.querySelector('body');
+
+    _renderPopup(index);
+    popup.classList.remove('hidden');
+    pOverlay.classList.remove('hidden');
+    body.classList.add('p-body');
+    const pCloseBtn = document.getElementById('close-popup');
+    pCloseBtn.addEventListener('click', () => {
+      popup.classList.add('hidden');
+      pOverlay.classList.add('hidden');
+      body.classList.remove('p-body');
+    });
+  });  
+});
+
+
+
+
+
+
+
+
+
+

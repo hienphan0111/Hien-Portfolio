@@ -206,6 +206,103 @@ h1 {
   width: 80vw;
 }
 
+/* Detail project */
+.popup {
+  margin: 0 auto;
+  justify-content: center;
+}
+.pop-container {
+  background-color: #fff;
+  border: 1px solid #091e42;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 2px 5px 0;
+  padding: 10px 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  width: 80vw;
+  height: 90vh;
+  margin-top: -45vh;
+  margin-left: -40vw;
+  z-index: 10;
+}
+
+#close-popup {
+  background-color: #fff;
+  border: none;
+  color: #67798e;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  float: right;
+  font-size: 18px;
+  top: 15px;
+  right: 10px;
+}
+
+.p-meta {
+  display: flex;
+  width: 100%;
+}
+
+.p-bot {
+  display: block;
+ 
+}
+
+.p-des {
+  text-align: justify; 
+  max-width: 768px;
+}
+
+.p-lang {
+  align-self: start;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  justify-self: center;
+}
+
+.p-img {
+  width: 100%;
+}
+
+.p-hr {
+  margin: 15px 0;
+}
+
+.p-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  width: 100%;
+}
+#p-btn-see,
+#p-btn-source {
+  align-items: center;
+  font-size: 15px;
+}
+
+#p-btn-see > img,
+#p-btn-source > i {
+  margin: 0 10px;
+  width: 14px;
+}
+
+.p-overlay {
+  background-color: #c1c7d0aa;
+  backdrop-filter: blur(5px);
+  position:fixed;
+  height: 100vh;
+  width:100vw;
+  z-index: 5;
+}
+
+.p-body {
+  overflow: hidden;
+  position: fixed;
+}
 /* Work section */
 
 .work {
@@ -286,6 +383,7 @@ h1 {
   display: flex;
   font-size: 12px;
   font-weight: 500;
+  overflow: hidden;
 }
 
 .langue li {
@@ -615,6 +713,7 @@ h1 {
   .langue {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
   }
 
   /* About section */
@@ -659,5 +758,20 @@ h1 {
 
   .contact-form > ul > li:last-child {
     display: block;
+  }
+
+  .p-bot {
+    align-items: top;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 20px;
+  }
+
+  .p-des {
+    margin-bottom: 50px;
+  }
+
+  .p-img {
+    margin: 50px 0;
   }
 }
