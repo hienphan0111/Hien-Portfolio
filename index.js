@@ -165,8 +165,8 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
   const emailAdd = email.value;
   if (checkValidEmail(emailAdd)) {
-      form.submit();
+    form.submit();
   } else {
-      showMessage(submit, ERROR);
-    }
+    showMessage(submit, ERROR);
+  }
 });
