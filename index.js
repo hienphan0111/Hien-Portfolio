@@ -80,13 +80,11 @@ function createList(arr) {
 
 const renderPopup = (index) => {
   const {
-    name, categories, description, featureImage 
-  }
-  = projects[index];
+    name, categories, description, featureImage,
+  } = projects[index];
   const {
-    technologies, liveVersion, scource
-  }
-  = projects[index];
+    technologies, liveVersion, scource,
+  } = projects[index];
 
   const catlog = createList(categories);
   const lang = createList(technologies);
