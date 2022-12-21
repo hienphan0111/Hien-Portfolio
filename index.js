@@ -168,3 +168,19 @@ const showMessage = (input, message) => {
   small.innerText = message;
 }
 
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const emailAdd = email.value;
+  if(checkValidEmail(emailAdd))
+  {
+    form.submit();
+  }
+  else 
+  {
+    showMessage(submit, ERROR);
+  }
+});
+
+email.addEventListener('change', ()=> {
+  const emailAdd = email.value;
+})
