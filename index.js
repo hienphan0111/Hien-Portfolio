@@ -147,7 +147,7 @@ pjBtn.forEach((item, index) => {
 /* Validate contact form */
 
 const form = document.getElementById('contact-form');
-const { email, btnSubmit } = form.elements;
+const { name, email, message, btnSubmit } = form.elements;
 
 const ERROR = 'Email does not valid. Plead type a valid email';
 
@@ -170,5 +170,50 @@ form.addEventListener('submit', (event) => {
     form.submit();
   } else {
     showMessage(btnSubmit, ERROR);
+  }
+});
+
+/* Preserve data in the browser */
+
+let contactFormData = {
+  data: [],
+  state: true,
+};
+
+const storeData = (item, fName) => {
+  let formData = {
+    name: '',
+    email: '',
+    message: '',
+  };
+
+  if(contactFormData.data.length > 0) {
+    formData = contactFormData.data[0];
+  }
+  console.log(formData);
+  formData[fName] = item.value;
+  contactFormData.data[0] = formData;
+  localStorage.setItem('contactFormData', JSON.stringify(contactFormData));
+  console.log(JSON.stringify(contactFormData));
+};
+
+name.addEventListener('change', () => {
+  storeData(name, 'name');
+});
+
+email.addEventListener('change', () => {
+  storeData(email, 'email');
+});
+
+message.addEventListener('change', () => {
+  storeData(message, 'message');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  contactFormData = JSON.parse(localStorage.getItem('contactFormData'))
+  if(contactFormData.data.length > 0) {
+    name.value = contactFormData.data[0].name;
+    email.value = contactFormData.data[0].email;
+    message.value = contactFormData.data[0].message;
   }
 });
