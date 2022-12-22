@@ -209,3 +209,12 @@ email.addEventListener('change', () => {
 message.addEventListener('change', () => {
   storeData(message, 'message');
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  contactFormData = JSON.parse(localStorage.getItem('contactFormData'));
+  if (contactFormData.data.length > 0) {
+    name.value = contactFormData.data[0].name;
+    email.value = contactFormData.data[0].email;
+    message.value = contactFormData.data[0].message;
+  }
+});
