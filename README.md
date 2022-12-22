@@ -146,6 +146,9 @@ Example:
 - [ ] **My project**
 - [ ] **About me**
 - [ ] **Contact**
+- [ ] **Toggle menu for mobile**
+- [ ] **popup project details**
+- [ ] **Preserve data in web browser**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
