@@ -148,7 +148,7 @@ pjBtn.forEach((item, index) => {
 
 const form = document.getElementById('contact-form');
 const {
-  name, email, message, btnSubmit
+  name, email, message, btnSubmit,
 } = form.elements;
 
 const ERROR = 'Email does not valid. Plead type a valid email';
