@@ -147,7 +147,9 @@ pjBtn.forEach((item, index) => {
 /* Validate contact form */
 
 const form = document.getElementById('contact-form');
-const { name, email, message, btnSubmit } = form.elements;
+const { 
+  name, email, message, btnSubmit 
+} = form.elements;
 
 const ERROR = 'Email does not valid. Plead type a valid email';
 
@@ -187,14 +189,12 @@ const storeData = (item, fName) => {
     message: '',
   };
 
-  if(contactFormData.data.length > 0) {
+  if (contactFormData.data.length > 0) {
     formData = contactFormData.data[0];
   }
-  console.log(formData);
   formData[fName] = item.value;
   contactFormData.data[0] = formData;
   localStorage.setItem('contactFormData', JSON.stringify(contactFormData));
-  console.log(JSON.stringify(contactFormData));
 };
 
 name.addEventListener('change', () => {
@@ -210,8 +210,8 @@ message.addEventListener('change', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  contactFormData = JSON.parse(localStorage.getItem('contactFormData'))
-  if(contactFormData.data.length > 0) {
+  contactFormData = JSON.parse(localStorage.getItem('contactFormData'));
+  if (contactFormData.data.length > 0) {
     name.value = contactFormData.data[0].name;
     email.value = contactFormData.data[0].email;
     message.value = contactFormData.data[0].message;
