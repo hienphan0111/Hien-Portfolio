@@ -191,7 +191,7 @@ const storeData = (item, fName) => {
 
   if (contactFormData.data.length > 0) {
     const { data } = contactFormData;
-    formData = data;
+    formData = data[0];
   }
   formData[fName] = item.value;
   contactFormData.data[0] = formData;
