@@ -189,8 +189,11 @@ const storeData = (item, fName) => {
     message: '',
   };
 
-  if (contactFormData.data.length > 0) {
+  if (contactFormData !== null) {
     [formData] = contactFormData.data;
+  } else {
+    contactFormData = {};
+    contactFormData.data = [formData];
   }
   formData[fName] = item.value;
   contactFormData.data[0] = formData;
@@ -211,9 +214,10 @@ message.addEventListener('change', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   contactFormData = JSON.parse(localStorage.getItem('contactFormData'));
-  if (contactFormData.data.length > 0) {
+  
+  if (contactFormData !== null) {
     name.value = contactFormData.data[0].name;
     email.value = contactFormData.data[0].email;
     message.value = contactFormData.data[0].message;
-  }
+  } 
 });
