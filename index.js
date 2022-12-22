@@ -214,10 +214,10 @@ message.addEventListener('change', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   contactFormData = JSON.parse(localStorage.getItem('contactFormData'));
-  
+
   if (contactFormData !== null) {
     name.value = contactFormData.data[0].name;
     email.value = contactFormData.data[0].email;
     message.value = contactFormData.data[0].message;
-  } 
+  }
 });
